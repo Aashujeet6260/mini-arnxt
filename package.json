@@ -1,0 +1,20 @@
+{
+  "name": "mini-arnxt",
+  "version": "1.0.0",
+  "description": "A mini 3D visualization web application using MERN, ThreeJS, and PostgreSQL.",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "build:frontend": "npm run build --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
