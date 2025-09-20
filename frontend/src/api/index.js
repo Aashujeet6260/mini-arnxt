@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: '/api' });
+const API = axios.create({ baseURL: 'https://my-3d-viewer-app.duckdns.org' });
 
-export const fetchProducts = () => API.get('/products');
-export const fetchProductById = (id) => API.get(`/products/${id}`);
+// Now these will correctly point to /api/products/products and /api/products/products/:id
+export const fetchProducts = () => API.get('/api/products/products');
+export const fetchProductById = (id) => API.get(`/api/products/products/${id}`);
