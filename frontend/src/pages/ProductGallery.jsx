@@ -27,6 +27,7 @@ const ProductGallery = () => {
         const { data } = await fetchProducts();
         setProducts(data);
       } catch (err) {
+        console.log(err)
         setError('Failed to fetch products. Ensure the backend server is running.');
       } finally {
         setLoading(false);
