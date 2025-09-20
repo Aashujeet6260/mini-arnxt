@@ -7,4 +7,4 @@ const API = axios.create({ baseURL: 'https://my-3d-viewer-app.duckdns.org' });
 export const fetchProducts = () => API.get('/api/products');
 
 // Correctly fetches a single product from GET /api/products/:id
-export const fetchProductById = (id) => API.get(`/api/products/${id}`);
+export const fetchProductById = (id) => API.get(`/api/products/${id}`); 
