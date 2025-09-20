@@ -5,6 +5,7 @@ export const getAllProducts = async (req, res) => {
     const products = await productModel.findAll();
     res.status(200).json(products);
   } catch (error) {
+    console.error(error); 
     res.status(500).json({ message: 'Error fetching products', error: error.message });
   }
 };
@@ -19,6 +20,7 @@ export const getProductById = async (req, res) => {
       res.status(404).json({ message: 'Product not found' });
     }
   } catch (error) {
+    console.error(error); 
     res.status(500).json({ message: 'Error fetching product details', error: error.message });
   }
 };
